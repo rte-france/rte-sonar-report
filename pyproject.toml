@@ -1,6 +1,6 @@
 [project]
 name = "rte-sonar-reports"
-version = "2025.2.1"
+version = "2025.3.0"
 description = "Tools for generating PDF reports used as requirements for deployment of an application in RTE production environments"
 license = {file = "LICENSE"}
 readme = "README.md"
