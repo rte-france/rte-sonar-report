@@ -5,7 +5,7 @@ description = "Tools for generating PDF reports used as requirements for deploym
 license = {file = "LICENSE"}
 readme = "README.md"
 dynamic = ["dependencies", "optional-dependencies"]
-requires-python = ">= 3.8"
+requires-python = ">= 3.9"
 classifiers = [
     "Programming Language :: Python :: 3"
 ]
@@ -13,8 +13,16 @@ maintainers = [
     {name = "Sebastien MURGEY", email = "sebastien.murgey@rte-france.com"},
 ]
 
+[project.urls]
+Homepage = "https://github.com/rte-france/rte-sonar-report"
+Issues = "https://github.com/rte-france/rte-sonar-report/issues"
+
 [project.scripts]
 rte-sonar-reports = "rte_sonar_reports.main:main"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 include-package-data = true
