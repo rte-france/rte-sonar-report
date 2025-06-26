@@ -1,0 +1,8 @@
+ordered-enum
+pyyml
+importlib_resources
+jsonschema
+requests
+reportlab
+svglib
+pytz

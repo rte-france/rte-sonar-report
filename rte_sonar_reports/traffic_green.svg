@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="256" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="300" x="64" y="0" rx="25" fill="grey" />
+  <path d="M 64 214 V 275 A 25 25 0 0 0 89 300 H 167 A 25 25 0 0 0 192 275 V 86 Z" fill="dimgrey"/>
+  <circle cx="128" cy="64" r="35" fill= "black"/>
+  <circle cx="128" cy="150" r="35" fill= "black"/>
+  <circle cx="128" cy="236" r="35" fill= "lightgreen"/>
+  <path d="M 0 35 A 35 35 0 0 0 70 35 Z" fill="darkseagreen" transform="translate(93,201) rotate(-45, 35, 35)"/>
+
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(0,228)"/>
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(10,266) rotate(-45, 25, 8)" />
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(10,190) rotate(45, 25, 8)" />
+
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(206,228)"/>
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(196,266) rotate(45, 25, 8)" />
+  <rect width="50" height="16" rx="8" x="0" y="0" fill="lightgreen" transform="translate(196,190) rotate(-45, 25, 8)" />
+</svg>

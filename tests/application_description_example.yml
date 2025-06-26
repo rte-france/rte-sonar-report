@@ -1,0 +1,24 @@
+application:
+  name: Elector
+  version: 1.6.1
+  modules:
+    - name: Frontend module
+      sonar_config: SonarCloud
+      project_key: frontend
+      branch: v1.2.1
+      type: frontend
+    - name: First backend module
+      sonar_config: SonarCloud
+      project_key: backend
+      branch: v1.0.0
+      type: backend
+    - name: Second backend module
+      sonar_config: SonarQube
+      project_key: backend
+      branch: v2.0.3
+      type: backend
+    - name: Other module
+      sonar_config: SonarQube
+      project_key: other
+      branch: v0.0.1-RC
+      type: other

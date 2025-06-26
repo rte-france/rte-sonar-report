@@ -1,0 +1,31 @@
+[project]
+name = "rte-sonar-reports"
+version = "2025.2.1"
+description = "Tools for generating PDF reports used as requirements for deployment of an application in RTE production environments"
+license = {file = "LICENSE"}
+readme = "README.md"
+dynamic = ["dependencies", "optional-dependencies"]
+requires-python = ">= 3.8"
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+maintainers = [
+    {name = "Sebastien MURGEY", email = "sebastien.murgey@rte-france.com"},
+]
+
+[project.scripts]
+rte-sonar-reports = "rte_sonar_reports.main:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["rte_sonar_reports"]
+
+[tool.setuptools.package-data]
+rte_sonar_reports = ["application_description_schema.yml", "RTE_logo.svg", "traffic_green.svg", "traffic_orange.svg", "traffic_red.svg"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies.dev = {file = ["requirements-dev.txt"]}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

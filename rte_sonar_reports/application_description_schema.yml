@@ -1,0 +1,45 @@
+type: object
+required:
+  - application
+properties:
+  application:
+    $ref: "#/application"
+
+application:
+  type: object
+  required:
+  - name
+  - version
+  properties:
+    name:
+      type: string
+    version:
+      type: string
+    modules:
+      type: array
+      items:
+        $ref: "#/module"
+module:
+  type: object
+  required:
+  - name
+  - type
+  - project_key
+  - sonar_config
+  properties:
+    name:
+      type: string
+    type:
+      $ref: "#/moduleType"
+    project_key:
+      type: string
+    branch:
+      type: string
+    sonar_config:
+      type: string
+moduleType:
+  type: string
+  anyOf:
+    - const: backend
+    - const: frontend
+    - const: other

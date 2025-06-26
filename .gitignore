@@ -1,0 +1,6 @@
+.venv
+*.egg-info/
+dist
+build
+
+tests/report_example.*
