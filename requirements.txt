@@ -4,5 +4,5 @@ importlib_resources
 jsonschema
 requests
 reportlab
-svglib
+svglib==1.5.1
 pytz
