@@ -4,7 +4,7 @@
 
 import logging
 
-from importlib_resources import read_text
+from importlib.resources import files
 from jsonschema import validate
 import yaml
 
@@ -13,7 +13,9 @@ from rte_sonar_reports.sonar import SonarClient, \
     MAINTAINABILITY_RATING_METRIC_KEY, LINES_TO_COVER_METRIC_KEY, UNCOVERED_LINES_METRIC_KEY, \
     CONDITIONS_TO_COVER_METRIC_KEY, UNCOVERED_CONDITIONS_METRIC_KEY
 
-APPLICATION_DESCRIPTION_SCHEMA = yaml.safe_load(read_text("rte_sonar_reports", "application_description_schema.yml"))
+APPLICATION_DESCRIPTION_SCHEMA = yaml.safe_load(
+    files("rte_sonar_reports").joinpath("application_description_schema.yml").read_text(encoding="utf-8")
+)
 LOGGER = logging.getLogger(__name__)
 
 

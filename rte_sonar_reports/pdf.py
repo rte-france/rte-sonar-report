@@ -7,7 +7,7 @@ import logging
 
 import pytz
 
-import importlib_resources
+from importlib.resources import files, as_file
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import cm
@@ -43,8 +43,8 @@ LOGGER = logging.getLogger(__name__)
 
 
 def add_rte_logo(report):
-    with importlib_resources.path(__package__, "RTE_logo.svg") as rte_logo_path:
-        rte_logo = svg2rlg(rte_logo_path)
+    with as_file(files(__package__) / "RTE_logo.svg") as rte_logo_path:
+        rte_logo = svg2rlg(str(rte_logo_path))
         report.append(Image(rte_logo, width=2.5*cm, height=2.5*cm, hAlign="RIGHT", kind="proportional"))
 
 
@@ -59,8 +59,8 @@ def add_title(report, app):
 
 def add_traffic_light(report, app, generation_date):
     prescription_status = compute_prescription_status(app, generation_date)
-    with importlib_resources.path(__package__, TRAFFIC_LIGHT_IMAGE.get(prescription_status)) as traffic_light_img_path:
-        traffic_light_img = svg2rlg(traffic_light_img_path)
+    with as_file(files(__package__) / TRAFFIC_LIGHT_IMAGE.get(prescription_status)) as traffic_light_img_path:
+        traffic_light_img = svg2rlg(str(traffic_light_img_path))
         report.append(Image(traffic_light_img, width=2.5*cm, height=2.5*cm, kind="proportional"))
 
 

@@ -5,7 +5,7 @@ description = "Tools for generating PDF reports used as requirements for deploym
 license = {file = "LICENSE"}
 readme = "README.md"
 dynamic = ["dependencies", "optional-dependencies"]
-requires-python = ">= 3.9"
+requires-python = ">= 3.12"
 classifiers = [
     "Programming Language :: Python :: 3"
 ]
