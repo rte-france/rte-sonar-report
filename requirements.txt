@@ -1,8 +1,7 @@
 ordered-enum
-pyyml
-importlib_resources
-jsonschema
-requests
-reportlab
-svglib==1.5.1
+PyYAML>=6.0.1
+jsonschema>=4.20.0
+requests>=2.32.4
+reportlab>=3.6.13
+svglib>=1.5.1
 pytz
